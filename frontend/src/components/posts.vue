@@ -131,9 +131,11 @@ export default {
     background-color: rgba($black, 0.1);
     margin-bottom: 40px;
     box-shadow: 0 0 6px rgba($black, 0.2);
+    border-radius:20px;
   }
   .header-post {
     height: 56px;
+    border-radius:20px;
     background-color: $white;
     display: flex;
     align-items: center;
@@ -157,10 +159,11 @@ export default {
     }
     button {
       margin: 0 10px 0 auto;
-      background-color: $error-color;
-      border: 2px solid darken($error-color, 12%);
-      color: $white;
-      font-size: 1.1rem;
+      background-color: $white;
+      border: none;
+      border-radius:20px;
+      color: $primary-color;
+      font-size: 1.4rem;
       padding: 2px 5px;
       transition: 0.1s;
       cursor: pointer;
@@ -172,6 +175,7 @@ export default {
   .post-picture {
     display: flex;
     max-height: 400px;
+    border-radius:20px;
     img {
       width: 100%;
       object-fit: contain;
@@ -188,6 +192,7 @@ export default {
       height: 40px;
       color: #212121;
       border: none;
+      border-radius:20px;
       display: flex;
       align-items: center;
       justify-content: center;

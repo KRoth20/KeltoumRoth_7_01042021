@@ -169,6 +169,7 @@ export default {
     margin-bottom: 10px;
     textarea {
       flex: 1;
+      border-radius:20px 0 0 20px;
       height: 50px;
       font-family: "Roboto", sans-serif;
       padding: 5px;
@@ -209,10 +210,10 @@ export default {
       height: 30px;
       width: 30px;
       margin-left: auto;
-      font-size: 1rem;
-      background-color: $error-color;
-      border: 2px solid darken($error-color, 12%);
-      color: $white;
+      font-size: 1.2rem;
+      background-color: $white;
+      border: none;
+      color: $primary-color;
       padding: 0 4px;
       transition: 0.1s;
       cursor: pointer;
@@ -224,10 +225,10 @@ export default {
       height: 30px;
       width: 30px;
       margin-left: 4px;
-      font-size: 1.05rem;
-      background-color: $primary-color;
-      border: 2px solid darken($primary-color, 8%);
-      color: $white;
+      font-size: 1.2rem;
+      background-color: $white;
+      border: none;
+      color: $black;
       padding: 0 4px;
       transition: 0.1s;
       cursor: pointer;

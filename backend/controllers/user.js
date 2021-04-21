@@ -7,21 +7,39 @@ const fs = require('fs');
 //logique de manipulation des utilisateurs
 //s'inscrire
 exports.signup = (req, res) => {
+  const email = req.body.email;
+  const firstname = req.body.firstname;
+  const name = req.body.name;
+  const password = req.body.password;
+  const regexEmail = /^[a-z0-9._-]+@[a-z0-9.-]{2,}[.][a-z]{2,3}$/;
+  const regexPassword = /((?=.*[a-z])(?=.*[A-Z]).{6,10})/;
+
+  if (email === null || email === '' ||
+    firstname === null || firstname === '' ||
+    name === null || name === '' ||
+    password === null || password === '') {
+    return res.status(400).json({ error: 'Tous les champs sont obligatoires' });
+  }
+
+  if (regexEmail.test(email) === false) { return res.status(400).json({ error: 'L\'email est invalide' }); }
+  if (regexPassword.test(password) === false) { return res.status(400).json({ error: 'Le mot de passe doit contenir entre 6 et 10 caratères et au moins une majuscule et une minuscule' }); }
+  
   // On hash et applique du salage sur le mot de passe avant de le stocker dans la BDD et on masque l'email
-  bcrypt.hash(req.body.password, 10)
+  bcrypt.hash(req.body.password, 10) 
     .then(hash => {
       const newUser = {
         firstname: req.body.firstname,
         name: req.body.name.toUpperCase(),
-        email: CryptoJS.MD5(req.body.email).toString(),
+        email: CryptoJS.MD5(req.body.email).toString(), // Sécurisation du mail
         password: hash
       }
       User.create(newUser)
-        .then(() => res.status(200).json({ message: "Utilisateur crée !" }))
-        .catch(() => res.status(400).json({ error: "Utilisateur non créé"}))
+        .then(() => res.status(200).json({ message: 'Utilisateur crée !' }))
+        .catch(() => res.status(400).json({ error: "Cet email est déjà utilisé" }))
     })
     .catch(error => res.status(500).json({ error }));
 };
+
 
 //se connecter
 exports.login = (req, res) => {

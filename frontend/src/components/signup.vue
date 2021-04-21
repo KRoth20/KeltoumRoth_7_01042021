@@ -71,22 +71,33 @@ export default {
       password: null,
     };
   },
-  methods: {
+    methods: {
     saveUser() {
+      const regexPassword = /((?=.*[a-z])(?=.*[A-Z]).{6,10})/;
+      const regexEmail = /^[a-z0-9._-]+@[a-z0-9.-]{2,}[.][a-z]{2,3}$/;
+      if (
+        (this.email !== null || this.password !== null) &&
+        regexPassword.test(this.password) &&
+        regexEmail.test(this.email)
+      ){
       axios
-        .post(`/auth/signup`, {
+        .post(`/auth/signup`, { // Sauvegarde de l'utilisateur
           firstname: this.firstname,
           name: this.name,
           email: this.email,
           password: this.password,
         })
-        .then(() => {
+        .then(() => { // Redirection vers la page principale
           router.push("/");
         })
         .catch(() => {
           this.$store.state.errorMsg = "Cet email est déjà utilisé";
         });
-    },
+      }
+      else {
+        alert("Merci de remplir correctement les champs ");
+      }
+    }
   },
   mounted() {
     this.$store.state.errorMsg = null;

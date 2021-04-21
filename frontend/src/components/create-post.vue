@@ -17,7 +17,7 @@
         />
       </div>
       <div v-else>
-        <font-awesome-icon :icon="['fas', 'plus-square']" /><br />
+        <font-awesome-icon :icon="['fas', 'arrow-circle-up']" /><br />
         <span>Publier une image</span>
       </div>
       <button type="submit" v-if="imagePreview">Envoyer</button>
@@ -76,6 +76,7 @@ export default {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
+  border-radius:20px;
   overflow: hidden;
   position: absolute;
   z-index: -1;
@@ -85,6 +86,7 @@ export default {
     font-size: 1.2em;
     font-weight: 300;
     border: 2px dashed rgba($primary-color, 0.8);
+    border-radius:20px;
     background-color: $white;
     display: inline-block;
     cursor: pointer;
