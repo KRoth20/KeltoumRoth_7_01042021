@@ -18,7 +18,9 @@ Pour lancer le serveur de développement: nodemon serve
 ```
 A compléter :
 ```
+```
 Remplacer les *** dans .env
+```
 ```
 Remplacer les *** dans config.json
 ```
