@@ -6,11 +6,11 @@
       <header class="header-post">
         <img
           :src="post.User.avatar_url"
-          :alt="'Avatar de ' + post.User.lastname + ' ' + post.User.firstname"
+          :alt="'Avatar de ' + post.User.name + ' ' + post.User.firstname"
         />
         <div class="header-text">
           <p class="header-text__name">
-            {{ post.User.lastname }} {{ post.User.firstname }}
+            {{ post.User.name }} {{ post.User.firstname }}
           </p>
           <p class="header-text__relativetime">
             Publié {{ formatDate(post.formatted_date) }}
@@ -32,7 +32,7 @@
         <img
           :src="post.img_url"
           :alt="
-            'Publication de' + post.User.lastname + ' ' + post.User.firstname
+            'Publication de' + post.User.name + ' ' + post.User.firstname
           "
         />
       </section>

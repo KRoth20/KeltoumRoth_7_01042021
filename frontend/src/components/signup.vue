@@ -89,7 +89,7 @@ export default {
           email: this.email,
           password: this.password,
         })
-        .then(() => { // Redirection vers la page principale
+        .then(() => { // Redirection vers la page principale 
           router.push("/");
         })
         .catch(() => {

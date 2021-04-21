@@ -2,7 +2,7 @@
 <template>
   <aside v-if="user" class="profile-box">
     <img :src="user.avatar_url" alt="Photo de profil" />
-    <h3>Coucou{{ user.lastname }} {{ user.firstname }}</h3>
+    <h3>Coucou {{ user.firstname }}</h3>
     <div class="member-status">
       <span v-if="user.admin == true">Admin</span>
       <span v-else>Membre</span>

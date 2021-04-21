@@ -12,7 +12,7 @@
       <img :src="user.avatar_url" alt="Photo de profil" />
       <p>Changer l'avatar</p>
     </label>
-    <h1>{{ user.lastname }} {{ user.firstname }}</h1>
+    <h1>{{ user.name }} {{ user.firstname }}</h1>
     <div class="member-status">
       <span v-if="user.admin == true">Admin</span>
       <span v-else>Membre</span>

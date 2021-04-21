@@ -18,11 +18,11 @@
     >
       <img
         :src="comment.User.avatar_url"
-        :alt="'Logo de ' + comment.User.lastname + ' ' + comment.User.firstname"
+        :alt="'Logo de ' + comment.User.name + ' ' + comment.User.firstname"
       />
       <div>
         <p class="comment-name">
-          {{ comment.User.lastname }} {{ comment.User.firstname }}
+          {{ comment.User.name }} {{ comment.User.firstname }}
         </p>
         <p
           v-if="modifyingComment == false"
@@ -80,7 +80,7 @@ export default {
       modifyingComment: false,
     };
   },
-  
+
 //manipulations des commentaires
   methods: {
     ...mapActions(["getPosts"]),
@@ -132,7 +132,7 @@ export default {
         });
     },
     deleteComment(commentId) {
-      Swal.fire({
+      Swal.fire({//sweet alerte pour pop up alerte
         title: "Êtes-vous sûr de vouloir supprimer ce commentaire ?",
         icon: "warning",
         showCancelButton: true,
