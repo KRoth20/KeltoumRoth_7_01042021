@@ -1,3 +1,4 @@
+<!--page d'accueil/mur-->
 <template>
   <Login v-if="this.$store.state.userId == null" />
   <div v-else class="home-container">

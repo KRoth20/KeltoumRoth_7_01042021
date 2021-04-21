@@ -1,3 +1,4 @@
+<!--affichage zone post-->
 <template>
   <section id="posts-container">
     <CreatePost />
@@ -70,6 +71,7 @@ export default {
   computed: {
     ...mapGetters(["showPosts"]),
   },
+  //manipulations des posts
   methods: {
     ...mapActions(["getPosts"]),
     formatDate(date) {

@@ -1,3 +1,4 @@
+<!--affichage zone de rappel du profil-->
 <template>
   <aside v-if="user" class="profile-box">
     <img :src="user.avatar_url" alt="Photo de profil" />
@@ -19,6 +20,7 @@ export default {
       user: "showConnectedUser",
     }),
   },
+  //manipulation sur le rappel du profil
   methods: {
     ...mapActions(["getOneUser"]),
   },

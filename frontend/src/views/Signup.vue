@@ -1,3 +1,4 @@
+<!--page d'inscription-->
 <template>
   <Signup />
 </template>

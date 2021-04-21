@@ -1,3 +1,4 @@
+<!--page acompte/profil-->
 <template>
   <Profile />
 </template>

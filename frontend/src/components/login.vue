@@ -1,3 +1,4 @@
+<!--affichage zone de connexion-->
 <template>
   <section id="login-container">
     <h1>Bienvenue sur le réseau social de votre entreprise !</h1>
@@ -50,6 +51,7 @@ export default {
       password: "",
     };
   },
+  //manipulations de la connexion
   methods: {
     loginUser() {
       axios

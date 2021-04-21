@@ -1,3 +1,4 @@
+<!--page parente-->
 <template>
   <div id="app">
     <Nav />

@@ -1,3 +1,4 @@
+<!--affichage zone commentaire-->
 <template>
   <section class="comments-container">
     <h3>Commentaires</h3>
@@ -63,6 +64,7 @@
   </section>
 </template>
 
+
 <script>
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -78,7 +80,8 @@ export default {
       modifyingComment: false,
     };
   },
-
+  
+//manipulations des commentaires
   methods: {
     ...mapActions(["getPosts"]),
     createComment(postId) {

@@ -5,7 +5,7 @@ import Signup from '../views/Signup.vue'
 import Profile from '../views/Profile.vue'
 
 Vue.use(VueRouter)
-
+//schéma des routes au sein du frontend
 const routes = [
   {
     path: '/',

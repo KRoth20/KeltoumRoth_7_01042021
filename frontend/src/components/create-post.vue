@@ -1,3 +1,4 @@
+<!--affichage zone creation d'un post-->
 <template>
   <form @submit.prevent="createPost" id="create-post-form">
     <input
@@ -36,6 +37,7 @@ export default {
       filename: null,
     };
   },
+  //manipulations le la création des posts
   methods: {
     updateFilename() {
       let inputFilename = document.querySelector(".add-post-button");

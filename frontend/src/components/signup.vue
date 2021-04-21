@@ -1,3 +1,4 @@
+<!--affichage zone inscription-->
 <template>
   <section id="signup-container">
     <h1>
@@ -71,6 +72,7 @@ export default {
       password: null,
     };
   },
+  //manipulations sur l'inscription
     methods: {
     saveUser() {
       const regexPassword = /((?=.*[a-z])(?=.*[A-Z]).{6,10})/;

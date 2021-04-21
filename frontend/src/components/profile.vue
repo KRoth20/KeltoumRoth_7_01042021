@@ -1,3 +1,4 @@
+<!--affichage zone compte/profil-->
 <template>
   <section class="profile-section" v-if="user">
     <input
@@ -69,6 +70,7 @@ export default {
   computed: {
     ...mapGetters({ user: "showConnectedUser" }),
   },
+  //manipulations sur le profil
   methods: {
     ...mapActions(["getOneUser"]),
     changeAvatar() {

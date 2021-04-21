@@ -1,3 +1,4 @@
+<!--affichage zone navigation-->
 <template>
   <nav>
     <router-link to="/">
