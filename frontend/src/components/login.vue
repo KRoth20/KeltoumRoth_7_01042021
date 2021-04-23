@@ -60,8 +60,9 @@ export default {
           password: this.password,
         })
         .then((res) => {
+  //connexion reste maintenue
           localStorage.setItem("token", res.data.token);
-          localStorage.setItem("user", res.data.userId);
+          // localStorage.setItem("user", res.data.userId);
           this.$store.dispatch("getUserId", res.data.userId);
           this.email = this.password = null;
         })

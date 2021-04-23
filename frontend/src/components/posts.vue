@@ -75,7 +75,7 @@ export default {
   methods: {
     ...mapActions(["getPosts"]),
     formatDate(date) {
-      let relativeDate = moment(date).add(1, "h").fromNow();
+      let relativeDate = moment(date).add(2, "h").fromNow();
       return relativeDate;
     },
     deletePost(postId) {

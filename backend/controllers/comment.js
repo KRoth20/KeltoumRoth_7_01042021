@@ -27,7 +27,7 @@ exports.deleteComment = (req, res) => {
 
 exports.modifyComment = (req, res) => {
   Comment.update({ content: req.body.content },
-    { where: { id: req.body.id } }
+    { where: { id: req.body.userId } }
   )
     .then(() => {
       res.status(201).json({ message: "Commentaire modifié" });

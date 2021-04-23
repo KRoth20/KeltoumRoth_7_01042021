@@ -53,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
     })
   };
 
-//A chaque post serajouté l'horodatage
+//A chaque post sera ajouté l'horodatage
   Post.addScope('formatted_date', {
     attributes: {
       include: [[sequelize.fn('date_format', sequelize.col('date_publication'), '%Y-%m-%d %H:%i'), 'formatted_date']]
